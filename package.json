@@ -5,11 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "parcel index.html",
     "test": "jest -i",
     "test:watch": "jest -i --watchAll"
   },
   "author": "Hidayat Chandra",
   "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.22.10",
     "@types/jest": "^29.5.4",
