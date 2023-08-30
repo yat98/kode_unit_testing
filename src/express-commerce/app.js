@@ -2,6 +2,7 @@ import path from 'path';
 import express from 'express';
 import {engine} from 'express-handlebars';
 import { getItems } from './models.js';
+import apiRoutes from './router.js';
 
 const __dirname = path.dirname('./');
 const app = express();
@@ -21,5 +22,7 @@ app.get('/', async (req, res) => {
   const items = await getItems();
   res.render('index', { items });
 });
+
+app.use('/api', apiRoutes);
 
 export default app;

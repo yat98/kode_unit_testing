@@ -6,3 +6,7 @@ const config = knexfile[env];
 const db = new knex(config);
 
 export const getItems = () => db('items').select();
+
+export const getItem = (id) => db('items').select().where('id',parseInt(id)).first();
+
+export const addItem = (item) => db('items').insert(item, 'id');
