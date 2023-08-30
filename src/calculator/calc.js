@@ -25,5 +25,5 @@ const div = (a,b) => {
 const print = (text) => console.log(text);
 
 export default{
-  add, sub, mul ,div, print
+  add, sub, mul ,div,
 };
