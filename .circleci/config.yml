@@ -5,3 +5,8 @@ workflows:
   node-tests:
     jobs:
       - node/test
+steps: 
+  - run: 
+    name: Run Tests
+    no_output_timeout: 15m
+    command: npm test
